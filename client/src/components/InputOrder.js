@@ -24,7 +24,7 @@ const InputOrder = () => {
         employee_id,
         return_date,
       };
-      const response = await fetch("http://localhost:5000/order", {
+      const response = await fetch("/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

@@ -6,7 +6,7 @@ const ListOrders = () => {
 
   const deleteOrder = async (id) => {
     try {
-      await fetch(`http://localhost:5000/order/${id}`, {
+      await fetch(`order/${id}`, {
         method: "DELETE",
       });
 
@@ -17,7 +17,7 @@ const ListOrders = () => {
   };
   const getOrders = async () => {
     try {
-      const response = await fetch("http://localhost:5000/orders");
+      const response = await fetch("/orders");
       const jsonData = await response.json();
 
       setOrders(jsonData);

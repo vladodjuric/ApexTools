@@ -7,7 +7,10 @@ const EditOrder = ({ order }) => {
     e.preventDefault();
     try {
       const body = { description };
-      await fetch(`http://localhost:5000/order/${order.order_id}`, {
+
+      //proxy
+
+      await fetch(`/order/${order.order_id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
