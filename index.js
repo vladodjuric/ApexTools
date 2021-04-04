@@ -58,18 +58,7 @@ app.post("/order", async (req, res) => {
     }
   });
 
-//get an order
-app.get("/order/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const order = await pool.query(`SELECT * FROM orders WHERE order_id = $1`, [
-      id,
-    ]);
-    res.json(order.rows[0]);
-  } catch (error) {
-    console.error(error.message);
-  }
-});
+/*
 
 //update an order
 
@@ -85,7 +74,7 @@ app.put("/order/:id", async (req, res) => {
   } catch (error) {
     console.error(error.message);
   }
-});
+});*/
 
 //delete an order
 
